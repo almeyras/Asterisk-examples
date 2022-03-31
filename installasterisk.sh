@@ -1,6 +1,6 @@
 #!/bin/bash
-setenv LANG C
-setenv LC_CTYPE "iso_8859_1"
+set LANG C
+set LC_CTYPE "iso_8859_1"
 
 echo
 echo Script de instalación de Asterisk - ejecutar como administrador
