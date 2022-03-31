@@ -3,10 +3,10 @@ set LANG C
 set LC_CTYPE "iso_8859_1"
 
 echo
-echo Script de instalación de Asterisk - ejecutar como administrador
-echo Adaptado de rosehosting.com y computingforgeeks.com/
+echo "Script de instalación de Asterisk - executar como administrador"
+echo "Adaptado de rosehosting.com e computingforgeeks.com/"
 echo
-echo Cando chegue o momento \(pantalla azul\), introduce o codigo de pais, 34 para Espana
+echo "Cando chegue o momento \(pantalla azul\), introduce o codigo de pais, 34 para Espana"
 
 apt update -y && apt upgrade -y
 apt install -y build-essential 
@@ -31,6 +31,6 @@ systemctl start asterisk
 systemctl enable asterisk
 systemctl status asterisk --no-pager
 
-echo Se o texto anterior pon \"active \(running\)\"...
+echo 'Se o texto anterior pon \"active \(running\)\"...'
 figlet -c ...instalacion terminada
 figlet -c -f banner yeah!
