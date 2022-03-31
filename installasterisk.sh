@@ -25,6 +25,7 @@ cd asterisk*
 make
 make install
 make samples
+locale-gen --purge es_ES.UTF-8
 make config
 make install-logrotate
 systemctl start asterisk
