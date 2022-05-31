@@ -14,27 +14,27 @@ apt install -y git-core subversion libjansson-dev sqlite autoconf automake libxm
 #el -y responde automaticamente yes a todas las preguntas
 
 cd /usr/src/
-sudo curl -O http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current.tar.gz
+curl -O http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current.tar.gz
 
-sudo git clone -b next git://git.asterisk.org/dahdi/linux dahdi-linux
+git clone -b next git://git.asterisk.org/dahdi/linux dahdi-linux
 cd dahdi-linux
-sudo make
-sudo make install
+make
+make install
 
 cd /usr/src/
-sudo git clone -b next git://git.asterisk.org/dahdi/tools dahdi-tools
+git clone -b next git://git.asterisk.org/dahdi/tools dahdi-tools
 cd dahdi-tools
-sudo autoreconf -i
-sudo ./configure
-sudo make install
-sudo make install-config
-sudo dahdi_genconf modules
+autoreconf -i
+./configure
+make install
+make install-config
+dahdi_genconf modules
 
 cd /usr/src/
-sudo git clone https://gerrit.asterisk.org/libpri libpri
+git clone https://gerrit.asterisk.org/libpri libpri
 cd libpri
-sudo make
-sudo make install
+make
+make install
 
 cd /usr/src
 tar -zxvf asterisk-16-current.tar.gz
@@ -50,6 +50,9 @@ make samples
 locale-gen --purge es_ES.UTF-8
 make config
 make install-logrotate
+
+systemctl start dahdi
+systemctl enable dahdi
 systemctl start asterisk
 systemctl enable asterisk
 systemctl status asterisk --no-pager
