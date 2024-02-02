@@ -17,7 +17,7 @@ cd /usr/src/
 wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-16.9.0.tar.gz
 tar -zxvf asterisk-16.9.0.tar.gz
 rm  asterisk-16.9.0.tar.gz
-cd asterisk-16.9.0.tar
+cd asterisk-16.9.0
 
 ./contrib/scripts/install_prereq install
 ./configure --with-jansson-bundled
