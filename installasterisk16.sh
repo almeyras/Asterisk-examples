@@ -14,7 +14,7 @@ apt install -y git-core subversion libjansson-dev sqlite autoconf automake libxm
 #el -y responde automaticamente yes a todas las preguntas
 
 cd /usr/src/
-wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-16.9.0.tar.gz
 tar -zxvf asterisk-16-current.tar.gz
 rm  asterisk-16-current.tar.gz
 cd asterisk*
