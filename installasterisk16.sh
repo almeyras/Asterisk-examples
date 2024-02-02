@@ -15,10 +15,9 @@ apt install -y git-core subversion libjansson-dev sqlite autoconf automake libxm
 
 cd /usr/src/
 wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-16.9.0.tar.gz
-tar -zxvf asterisk-16-current.tar.gz
-rm  asterisk-16-current.tar.gz
-cd asterisk*
-#como el nombre de la carpeta cambia con el número de versión, le pongo asterisco
+tar -zxvf asterisk-16.9.0.tar.gz
+rm  asterisk-16.9.0.tar.gz
+cd asterisk-16.9.0.tar
 
 ./contrib/scripts/install_prereq install
 ./configure --with-jansson-bundled
