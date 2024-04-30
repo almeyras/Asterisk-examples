@@ -10,7 +10,7 @@ apt install -y build-essential unzip                            # Ferramentas de
 cd ~
 wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-21-current.tar.gz
 tar -zxvf asterisk-21-current.tar.gz
-cd asterisk-21.1.0/
+cd asterisk-21.*/
 
 # Prepara ficheiros, instala prerrequerimentos (SQlite 3, pjsip), compilacion e instalacion
 contrib/scripts/install_prereq install
